@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head th:insert="layouts/header.html">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div th:insert="layouts/navbar.html">
+
+    </div>
+</div>
+<div class="container align-items-center">
+    <div class="row">
+        <div class="col-5 mx-auto mt-5">
+            <form action="/add-student" method="post">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">NAME : </label>
+                            <input type="text" class="form-control" name="name" id="name" placeholder="Insert name : ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="surname" class="form-label">SURNAME : </label>
+                            <input type="text" class="form-control" name="surname" id="surname" placeholder="Insert surname : ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <label for="exam" class="form-label">EXAM : </label>
+                            <input type="number" class="form-control" name="exam" id="exam" placeholder="Insert exam : ">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <div class="mb-3">
+                            <button class="btn btn-success">Add</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

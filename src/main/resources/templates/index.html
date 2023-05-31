@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head th:insert="layouts/header.html">
+    <meta charset="UTF-8">
+    <title>Hello </title>
+</head>
+<body>
+<div class="container-fluid">
+    <div th:insert="layouts/navbar.html">
+
+    </div>
+</div>
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-12">
+            <!--<table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>SURNAME</th>
+                    <th>EXAM</th>
+                    <th>MARK</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each = "stud : ${students}" th:class="${stud.exam>=49?'text-primary':'text-danger'}">
+                    <td th:text="${stud.id}"></td>
+                    <td th:text="${stud.name}"></td>
+                    <td th:text="${stud.surname}"></td>
+                    <td th:text="${stud.exam}"></td>
+                    <td th:text="${stud.mark}"></td>
+                </tr>
+                </tbody>
+            </table>-->
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>SURNAME</th>
+                    <th>EXAM</th>
+                    <th>MARK</th>
+                </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                <tr th:each = "stud : ${students}" th:class="${stud.exam>=49?'text-dark':'text-danger'}">
+                    <td th:text="${stud.id}"></td>
+                    <td th:text="${stud.name}"></td>
+                    <td th:text="${stud.surname}"></td>
+                    <td th:text="${stud.exam}"></td>
+                    <td th:text="${stud.mark}"></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+</body>
+</html>
